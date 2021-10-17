@@ -1,1 +1,12 @@
-
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.interpolate import InterpolatedUnivariateSpline
+t=np.arange(0,10,0.01)
+sin=np.sin(t)
+f1 = InterpolatedUnivariateSpline(t, sin)
+dfdt = f1.derivative()
+plt.plot(t, dfdt(t))
+plt.show()
+dfdt2=dfdt.derivative()
+plt.plot(t, dfdt2(t))
+plt.show()
