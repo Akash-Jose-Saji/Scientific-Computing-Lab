@@ -1,1 +1,6 @@
-
+import numpy as np 
+import matplotlib.pyplot as plt
+t=np.arange(-5,5,0.01)
+f=4*t**2+3
+plt.plot(t,f)
+plt.show()
